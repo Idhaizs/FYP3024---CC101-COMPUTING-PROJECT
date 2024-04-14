@@ -1,0 +1,133 @@
+header a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fafb; 
+    color: #333; 
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.stat-box {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #ff6b6b, #ffa500);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stat-box:hover::before {
+    opacity: 1;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.stat-box i {
+    font-size: 48px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.stat-box h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-box p {
+    font-size: 28px;
+    font-weight: 700;
+    color: #666;
+}
+
+.btn-primary {
+    background-color: #ff6b6b; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #fff; 
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff8c8c; 
+}
+
+.logout-btn {
+    display: inline-block;
+    padding: 6px 12px; 
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.logout-btn:hover {
+    background-color: #ff8c8c;
+}
+
+.select-status {
+    width: 150px; 
+    padding: 0.375rem 0.75rem; 
+    font-size: 1.5rem; 
+    line-height: 1.5; 
+}
+
+
+.save-btn {
+    padding: 0.5rem 0.5rem; 
+    font-size: 1.5rem; 
+    margin-top: -1px;
+}
+
+

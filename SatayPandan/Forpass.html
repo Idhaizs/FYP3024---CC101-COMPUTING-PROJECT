@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forgot Password</title>
+<link rel="stylesheet" href="Forpass.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="back-button">
+    <button type=submit><a href="Login_Page.html" onclick="goBack()">←</a></button>
+  </div>
+  
+  <div class="content">
+    <div class="header">
+      <h2>FORGOT PASSWORD</h2>
+      <img src="lock-icon.png" alt="Lock Icon" class="lock-icon">
+    </div>
+    
+    <p class="info-text">Trouble Logging in?</p>
+    <p class="info-text">Change your password</p>
+    
+    <form id="resetForm" action="/reset-password" method="post">
+      <input type="New password" id="New password" name="New password" placeholder="New Password" required>
+      <br><input type="Confirm password" id="Confirm password" name="Confirm password" placeholder="Confirm Password" required>
+      <br><button type="submit" class="reset-button">Submit</button>
+    </form>
+    
+    <div class="footer">
+      <button onclick="returnToLogin()">Return to Login Page</button>
+    </div>
+  </div>
+</div>
+
+<script src="Forpass.js"></script>
+</body>
+</html>

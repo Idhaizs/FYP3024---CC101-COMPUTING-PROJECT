@@ -1,0 +1,62 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.app-container {
+    background-image: url("bg-img.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #f0ad4e;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#loginBtn {
+    text-decoration: none;     
+}
+
+
+button:hover {
+    background-color: #ec971f;
+}
+
+p {
+    color: #ffffff;
+}
+
+a {
+    color: #ffd700;
+}
+
+a:hover {
+    color: #f0ad4e;
+}

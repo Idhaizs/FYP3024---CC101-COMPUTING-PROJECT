@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orders</title>
+<link rel="stylesheet" href="Orders.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>Satay Pandan</h1>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li class="active"><a href="Menu.html">Orders</a></li>
+                    <li><a href="Preparation.html">Preparation</a></li>
+                    <li><a href="#bills">Bills</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h2>Add-On Item</h2>
+            </header>
+            
+            <section id="add-on">
+                <?php
+                // Establish database connection
+                $servername = "localhost";
+                $username = "username";
+                $password = "password";
+                $dbname = "your_database";
+
+                $conn = new mysqli($servername, $username, $password, $dbname);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Query to fetch add-on items from the database
+                $sql = "SELECT * FROM add_on_items";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // Output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        echo '<div class="order-item">';
+                        echo '<img src="' . $row["image_url"] . '" alt="Gambar Order">';
+                        echo '<span class="item-name">' . $row["item_name"] . '</span>';
+                        echo '<button class="add">+</button>';
+                        echo '<input type="number" value="0">';
+                        echo '<button class="subtract">-</button>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo "0 results";
+                }
+                $conn->close();
+                ?>
+            </section>
+            
+            <section id="payment-details">
+                <div>
+                    <span>Subtotal</span>
+                    <span id="subtotal">RM0.00</span>
+                </div>
+                <div>
+                    <span>Total</span>
+                    <span id="total">RM0.00</span>
+                </div>
+            </section>
+
+            <button id="confirm-order">Confirm Order</button>
+        </main>
+    </div>
+
+<script src="Orders.js"></script>
+</body>
+</html>
